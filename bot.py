@@ -7,7 +7,7 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )import os
-BOT_TOKEN = os.environ.get("BOT_TOKEN")
+BOT_TOKEN = os.environ.get("8773270728:AAHWzJ9xkYemp52PtpRJ8EUJXTBQQyIHVD8")
 if not BOT_TOKEN:
     raise RuntimeError("BOT_TOKEN environment variable is not set")
 
