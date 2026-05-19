@@ -7,42 +7,26 @@ from telegram.ext import (
     filters,
 )
 
-# ─────────────────────────────────────────
-#  🔑  PUT YOUR BOT TOKEN HERE
-# ─────────────────────────────────────────
-BOT_TOKEN = "8773270728:AAHWzJ9xkYemp52PtpRJ8EUJXTBQQyIHVD8"
+# PUT YOUR BOT TOKEN HERE
+BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"
 
-# ─────────────────────────────────────────
-#  💬  KEYWORD → REPLY  (edit freely!)
-#  Keys are lowercase; matching is case-insensitive.
-# ─────────────────────────────────────────
+# KEYWORD REPLIES - edit these as you like
 KEYWORD_REPLIES = {
-    "hello": "👋 hnji bhai kitna loss hai apka ??"
-    "price": "bhai apko 500 mai vip ka access miljayega "
-    "buy": "🛒 To buy, please visit: @uvipandat,"
-    "help": "🆘 Here are the commands you can use:\n• 'price' – view pricing\n• 'buy' – purchase a plan\n• 'contact' – get our contact info\n• 'hours' – working hours",
-    "contact": "📞 You can reach us at:\n• Email: support@example.com\n• Telegram: @yourusername\n• Phone: +91-XXXXXXXXXX"
-    "hours": "🕐 We are available:\nMon–Sat: 9 AM – 6 PM IST\nSunday: Closed"
-    "thanks": "😊 You're welcome! Let us know if you need anything else."
-    "thank you": "😊 Happy to help! Feel free to ask anytime."
+    "hello": "Hello! Welcome to our channel.",
+    "hi": "Hi there! How can I help you?",
+    "price": "bhai apko 500 mai vip ka access miljayega",
+    "buy": "To buy, contact us at @yourusername",
+    "help": "Type price, buy, or contact for info.",
+    "contact": "Contact us at @yourusername",
+    "thanks": "You are welcome!",
 }
 
-# ─────────────────────────────────────────
-#  📝  DEFAULT reply when no keyword matches
-# ─────────────────────────────────────────
+# DEFAULT reply when no keyword matches
 DEFAULT_REPLY = (
-    "🤖 Thanks for your message!\n\n"
-    "I'm am manager of jaiclub. Here's what I can help with:\n"
-    "• Type 'price' for pricing info\n"
-    "• Type 'buy' to make a purchase\n"
-    "• Type 'contact' to reach our team\n"
-    "• Type 'help' for all options\n\n"
-    "Our team will also get back to you soon! 🙏"
+    "Thanks for your message! "
+    "Type 'help' to see what I can do."
 )
 
-# ─────────────────────────────────────────
-#  ⚙️  Bot logic (no need to edit below)
-# ─────────────────────────────────────────
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
@@ -53,10 +37,8 @@ logger = logging.getLogger(__name__)
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_text = update.message.text.lower().strip()
     user_name = update.effective_user.first_name or "there"
-
     logger.info(f"Message from {user_name}: {user_text}")
 
-    # Check each keyword
     reply = None
     for keyword, response in KEYWORD_REPLIES.items():
         if keyword in user_text:
@@ -72,7 +54,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-    logger.info("✅ Bot is running...")
+    logger.info("Bot is running...")
     app.run_polling()
 
 
