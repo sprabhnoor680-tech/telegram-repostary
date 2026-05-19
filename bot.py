@@ -17,14 +17,14 @@ BOT_TOKEN = "8773270728:AAHWzJ9xkYemp52PtpRJ8EUJXTBQQyIHVD8"
 #  Keys are lowercase; matching is case-insensitive.
 # ─────────────────────────────────────────
 KEYWORD_REPLIES = {
-    "hello": "👋 hnji bhai kitna loss hai apka ??",
-    "price": "💰 bhai merr vip k liye minimum 500 agar 300 to hack ka access miljayEGA
-    "buy": "🛒 To buy, please visit: @uvipandat,
+    "hello": "👋 hnji bhai kitna loss hai apka ??"
+    "price": "bhai apko 500 mai vip ka access miljayega "
+    "buy": "🛒 To buy, please visit: @uvipandat,"
     "help": "🆘 Here are the commands you can use:\n• 'price' – view pricing\n• 'buy' – purchase a plan\n• 'contact' – get our contact info\n• 'hours' – working hours",
-    "contact": "📞 You can reach us at:\n• Email: support@example.com\n• Telegram: @yourusername\n• Phone: +91-XXXXXXXXXX",
-    "hours": "🕐 We are available:\nMon–Sat: 9 AM – 6 PM IST\nSunday: Closed",
-    "thanks": "😊 You're welcome! Let us know if you need anything else.",
-    "thank you": "😊 Happy to help! Feel free to ask anytime.",
+    "contact": "📞 You can reach us at:\n• Email: support@example.com\n• Telegram: @yourusername\n• Phone: +91-XXXXXXXXXX"
+    "hours": "🕐 We are available:\nMon–Sat: 9 AM – 6 PM IST\nSunday: Closed"
+    "thanks": "😊 You're welcome! Let us know if you need anything else."
+    "thank you": "😊 Happy to help! Feel free to ask anytime."
 }
 
 # ─────────────────────────────────────────
