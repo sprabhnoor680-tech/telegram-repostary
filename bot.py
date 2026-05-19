@@ -1,4 +1,5 @@
 import logging
+import os
 from telegram import Update
 from telegram.ext import (
     ApplicationBuilder,
@@ -6,10 +7,9 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
-
-# PUT YOUR BOT TOKEN HERE
-import os
-BOT_TOKEN = os.environ.get("8773270728:AAHWzJ9xkYemp52PtpRJ8EUJXTBQQyIHVD8")
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise RuntimeError("BOT_TOKEN environment variable is not set")
 
 # KEYWORD REPLIES - edit these as you like
 KEYWORD_REPLIES = {
