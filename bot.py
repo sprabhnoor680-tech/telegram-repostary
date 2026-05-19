@@ -8,7 +8,8 @@ from telegram.ext import (
 )
 
 # PUT YOUR BOT TOKEN HERE
-BOT_TOKEN = "8773270728:AAHWzJ9xkYemp52PtpRJ8EUJXTBQQyIHVD8"
+import os
+BOT_TOKEN = os.environ.get("8773270728:AAHWzJ9xkYemp52PtpRJ8EUJXTBQQyIHVD8")
 
 # KEYWORD REPLIES - edit these as you like
 KEYWORD_REPLIES = {
