@@ -7,19 +7,19 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )import os
-BOT_TOKEN = os.environ.get("8773270728:AAHWzJ9xkYemp52PtpRJ8EUJXTBQQyIHVD8")
+BOT_TOKEN = os.environ.get(YOUR_TOKEN)
 if not BOT_TOKEN:
     raise RuntimeError("BOT_TOKEN environment variable is not set")
 
 # KEYWORD REPLIES - edit these as you like
 KEYWORD_REPLIES = {
     "hello": "Hello! Welcome to our channel.",
-    "hi": "Hi there! How can I help you?",
-    "price": "bhai apko 500 mai vip ka access miljayega",
-    "buy": "To buy, contact us at @yourusername",
-    "help": "Type price, buy, or contact for info.",
-    "contact": "Contact us at @yourusername",
-    "thanks": "You are welcome!",
+    "hi": "Hi there! How can I help you?"
+    "price": "bhai apko 500 mai vip ka access miljayega"
+    "buy": "To buy, contact us at @yourusername"
+    "help": "Type price, buy, or contact for info."
+    "contact": "Contact us at @yourusername"
+    "thanks": "You are welcome!"
 }
 
 # DEFAULT reply when no keyword matches
